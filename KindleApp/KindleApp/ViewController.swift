@@ -17,7 +17,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
        // can provide custom code starting from here
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.register(BookCell.self, forCellReuseIdentifier: "cellId")
         tableView.tableFooterView = UIView()
         
         navigationItem.title = "KindleApp"
@@ -33,6 +33,7 @@ class ViewController: UITableViewController {
         
         let book = books?[indexPath.row]
         cell.textLabel?.text = book?.title
+        cell.imageView?.image = book?.image
         return cell
     }
     
@@ -45,8 +46,8 @@ class ViewController: UITableViewController {
         let page1 = Page(number: 1, text: "Text for the first page")
         let page2 = Page(number: 2, text: "Text for second page")
         let pages = [page1, page2]
-        let book = Book(title: "Steve Jobs", author: "Walter Isaacson", pages: pages)
-        let book2 = Book(title: "Bill Gates: A Biography", author: "Michael Hecraft", pages: [
+        let book = Book(title: "Steve Jobs", author: "Walter Isaacson", image: #imageLiteral(resourceName: "steve_jobs"), pages: pages)
+        let book2 = Book(title: "Bill Gates: A Biography", author: "Michael Hecraft", image: #imageLiteral(resourceName: "bill_gates"), pages: [
             Page(number: 1, text:"Text for p1"),
             Page(number: 2, text: "Text for p2"),
             Page(number: 3, text: "Text for p3")
