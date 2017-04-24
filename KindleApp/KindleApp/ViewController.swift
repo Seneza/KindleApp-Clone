@@ -16,16 +16,32 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        // can provide custom code starting from here
-        view.backgroundColor = .red
-        setup()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.tableFooterView = UIView()
+        
+        navigationItem.title = "KindleApp"
+        setupBooks()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        let book = books?[indexPath.row]
+        cell.textLabel?.text = book?.title
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let count = books?.count else { return 0 }
+        return count
     }
 
-    func setup() {
+    func setupBooks() {
         let page1 = Page(number: 1, text: "Text for the first page")
         let page2 = Page(number: 2, text: "Text for second page")
         let pages = [page1, page2]
@@ -37,14 +53,6 @@ class ViewController: UITableViewController {
             ])
         
         self.books = [book, book2]
-        if let unwrappedBooks = self.books {
-            for book in unwrappedBooks {
-                print(book.title)
-                for page in book.pages {
-                    print(page.text)
-                }
-            }
-        }
 
     }
 
