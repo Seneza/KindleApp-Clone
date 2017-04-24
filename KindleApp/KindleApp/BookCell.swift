@@ -9,10 +9,29 @@
 import UIKit
 
 class BookCell: UITableViewCell {
+    
+    let coverImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .red
+        return imageView
+    }()
+    
+    let titleLabel: UILabel = {
+       let label = UILabel()
+        label.text = "This is the first text inside the label"
+        label.numberOfLines = 0
+        label.backgroundColor = .blue
+        return label
+    }()
+    
      override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        print("Cell is being initialized...")
+        
         backgroundColor = .yellow
+        addSubview(coverImageView)
+        coverImageView.frame = CGRect(x: 8, y: 8, width: 50, height: 50)
+        addSubview(titleLabel)
+        titleLabel.frame = CGRect(x: 60, y: 20, width: UIScreen.main.bounds.width, height: 80)//magic numbers: Guessing coordinates when you use frames
     }
     
     required init?(coder aDecoder: NSCoder) {
