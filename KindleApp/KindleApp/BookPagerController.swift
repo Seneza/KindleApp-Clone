@@ -6,4 +6,11 @@
 //  Copyright © 2017 GastonSeneza. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BookPagerController: UICollectionViewController {
+    override func viewDidLoad() {
+        collectionView?.backgroundColor = .white
+        navigationItem.title = "BookName"
+    }
+}
