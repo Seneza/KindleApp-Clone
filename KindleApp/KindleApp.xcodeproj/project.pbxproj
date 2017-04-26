@@ -13,6 +13,7 @@
 		3D1D19881EAD47DF0071B864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1D19861EAD47DF0071B864 /* LaunchScreen.storyboard */; };
 		3D1D19901EAD9DC60071B864 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D198F1EAD9DC60071B864 /* Models.swift */; };
 		3D1D19921EADC1160071B864 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1D19911EADC1160071B864 /* BookCell.swift */; };
+		3D224C361EB03F07006AC53A /* BookPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D224C351EB03F07006AC53A /* BookPagerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3D1D19891EAD47DF0071B864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D1D198F1EAD9DC60071B864 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		3D1D19911EADC1160071B864 /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
+		3D224C351EB03F07006AC53A /* BookPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookPagerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3D1D19891EAD47DF0071B864 /* Info.plist */,
 				3D1D198F1EAD9DC60071B864 /* Models.swift */,
 				3D1D19911EADC1160071B864 /* BookCell.swift */,
+				3D224C351EB03F07006AC53A /* BookPagerController.swift */,
 			);
 			path = KindleApp;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1D19921EADC1160071B864 /* BookCell.swift in Sources */,
+				3D224C361EB03F07006AC53A /* BookPagerController.swift in Sources */,
 				3D1D19901EAD9DC60071B864 /* Models.swift in Sources */,
 				3D1D19801EAD47DF0071B864 /* ViewController.swift in Sources */,
 				3D1D197E1EAD47DF0071B864 /* AppDelegate.swift in Sources */,
@@ -300,6 +304,7 @@
 				3D1D198E1EAD47DF0071B864 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
