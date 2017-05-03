@@ -25,8 +25,15 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedBook = self.books?[indexPath.row]
+        //print(book?.title ?? "no book")
+        
         let layout = UICollectionViewFlowLayout()
         let bookPagerController = BookPagerController(collectionViewLayout: layout)
+        
+        bookPagerController.book = selectedBook
+        
         let navigationController = UINavigationController(rootViewController: bookPagerController)
         present(navigationController, animated: true, completion: nil)
     }
